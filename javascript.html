@@ -1,0 +1,55 @@
+<!DOCTYPE html>	
+<html>
+<head>
+	<title>With You</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+</head>
+<body>
+	<header>
+		<a href="#" class="logo">LOGO</a>
+		<ul>
+			<li><a href="#" class="active">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Work</a></li>
+			<li><a href="#">Contact</a></li> 
+		</ul>
+	</header>
+	<section>
+		<img src="stars.png" id="stars">
+		<img src="moon.png" id="moon">
+		<h2 id="text">Hồ Quốc Thắng</h2>
+		<a href="#sec" id="btn">Explore</a>
+		<img src="mountains_behind.png" id="mountain_behind">
+		<img src="mountains_front.png" id="mountain_front">
+	</section>
+	<div class="sec" id="sec">
+		<h2> 
+		<p>May mắn là phần thưởng đính kèm của sự cố gắng. Nếu không trải qua quá trình tích lũy thực lực từ thuở ban đầu, thì dù có tặng cho bạn sự may mắn, bạn cũng không nắm giữ được. Những gì thượng đế ban cho mỗi người đều giống nhau, nhưng sự chuẩn bị của mỗi người lại khác nhau. Đừng ngưỡng mộ những người được vận may lớn, bạn phải thật cố gắng, thì mới có thể gặp may mắn.<br><br>
+		Bạn chẳng thể nào thỏa mãn cái nhìn của tất cả mọi người, cách tốt nhất là ai không coi trọng bạn, bạn cũng đừng để ý đến người ta. Đừng vì một, hai câu nói của người khác mà thay đổi cách nhìn nhận về chính mình, bản thân thế nào thì cứ tiếp tục thế ấy, sự cố gắng của bạn chỉ là vì chính bạn mà thôi</p>
+	</h2>
+	</div>
+	<script>
+		let stars = document.getElementById('stars');
+		let moon = document.getElementById('moon');
+		let mountain_behind = document.getElementById('mountain_behind');	
+		let text = document.getElementById('text');
+		let btn = document.getElementById('btn');
+		let mountain_front = document.getElementById('mountain_front');
+		let header = document.querySelector('header');
+		window.addEventListener('scroll', function(){
+			let value = window.scrollY;
+			stars.style.left = value * 0.25 + 'px';
+			moon.style.top = value * 1.05 + 'px'; 
+			mountain_behind.style.top = value * 0.5 + 'px';
+			mountain_front.style.left = value * 0 + 'px';
+			text.style.marginRight  = value * 4 + 'px';
+			text.style.marginTop  = value * 1.5 + 'px';
+			btn.style.marginTop  = value * 1.5 + 'px';
+			header.style.marginTop  = value * 0.5 + 'px';
+		})
+	</script>
+</body>
+</html>
